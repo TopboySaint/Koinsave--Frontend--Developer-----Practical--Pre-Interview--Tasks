@@ -57,9 +57,15 @@ const Signup = () => {
 
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100 px-4 py-6 sm:p-6">
-      <div className="w-full max-w-md sm:max-w-lg bg-white rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-6 sm:p-10 border border-green-100 mx-auto">
-        <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-800 mb-6 sm:mb-8 text-center tracking-tight sm:tracking-wide drop-shadow-lg" style={{ fontFamily: 'Montserrat, Arial, sans-serif' }}>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-900 dark:to-gray-800 px-4 py-6 sm:p-6">
+      <div className="w-full max-w-md sm:max-w-lg bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-6 sm:p-10 border border-green-100 dark:border-gray-700 mx-auto">
+        <Link to="/" className="flex items-center justify-center gap-2 mb-6">
+          <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center">
+            <span className="text-white font-bold text-xl">K</span>
+          </div>
+          <span className="text-2xl font-extrabold bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent">KoinSave</span>
+        </Link>
+        <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-800 dark:text-gray-100 mb-6 sm:mb-8 text-center tracking-tight sm:tracking-wide drop-shadow-lg" style={{ fontFamily: 'Montserrat, Arial, sans-serif' }}>
           Open Your KoinSave Account
         </h2>
         <form className="space-y-5 sm:space-y-6" onSubmit={formik.handleSubmit}>
@@ -69,13 +75,13 @@ const Signup = () => {
             </div>
           )}
           <div>
-            <label className="block text-gray-700 mb-2 font-medium" htmlFor="firstName">First Name</label>
+            <label className="block text-gray-700 dark:text-gray-200 mb-2 font-medium" htmlFor="firstName">First Name</label>
             <input
               type="text"
               id="firstName"
               name="firstName"
               placeholder="Enter your first name"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-gray-50 transition-all"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-gray-50 dark:bg-gray-700 dark:text-white transition-all"
               value={formik.values.firstName}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -85,13 +91,13 @@ const Signup = () => {
             ) : null}
           </div>
           <div>
-            <label className="block text-gray-700 mb-2 font-medium" htmlFor="lastName">Last Name</label>
+            <label className="block text-gray-700 dark:text-gray-200 mb-2 font-medium" htmlFor="lastName">Last Name</label>
             <input
               type="text"
               id="lastName"
               name="lastName"
               placeholder="Enter your last name"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-gray-50 transition-all"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-gray-50 dark:bg-gray-700 dark:text-white transition-all"
               value={formik.values.lastName}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -101,13 +107,13 @@ const Signup = () => {
             ) : null}
           </div>
           <div>
-            <label className="block text-gray-700 mb-2 font-medium" htmlFor="email">Email Address</label>
+            <label className="block text-gray-700 dark:text-gray-200 mb-2 font-medium" htmlFor="email">Email Address</label>
             <input
               type="email"
               id="email"
               name="email"
               placeholder="Enter your email address"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-gray-50 transition-all"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-gray-50 dark:bg-gray-700 dark:text-white transition-all"
               value={formik.values.email}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -117,13 +123,13 @@ const Signup = () => {
             ) : null}
           </div>
           <div>
-            <label className="block text-gray-700 mb-2 font-medium" htmlFor="phone">Phone Number</label>
+            <label className="block text-gray-700 dark:text-gray-200 mb-2 font-medium" htmlFor="phone">Phone Number</label>
             <input
               type="tel"
               id="phone"
               name="phone"
               placeholder="Enter your phone number"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-gray-50 transition-all"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-gray-50 dark:bg-gray-700 dark:text-white transition-all"
               value={formik.values.phone}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -133,13 +139,13 @@ const Signup = () => {
             ) : null}
           </div>
           <div>
-            <label className="block text-gray-700 mb-2 font-medium" htmlFor="password">Password</label>
+            <label className="block text-gray-700 dark:text-gray-200 mb-2 font-medium" htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
               name="password"
               placeholder="Create a password"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-gray-50 transition-all"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-gray-50 dark:bg-gray-700 dark:text-white transition-all"
               value={formik.values.password}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -149,13 +155,13 @@ const Signup = () => {
             ) : null}
           </div>
           <div>
-            <label className="block text-gray-700 mb-2 font-medium" htmlFor="confirmPassword">Confirm Password</label>
+            <label className="block text-gray-700 dark:text-gray-200 mb-2 font-medium" htmlFor="confirmPassword">Confirm Password</label>
             <input
               type="password"
               id="confirmPassword"
               name="confirmPassword"
               placeholder="Re-enter your password"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-gray-50 transition-all"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-gray-50 dark:bg-gray-700 dark:text-white transition-all"
               value={formik.values.confirmPassword}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -182,10 +188,10 @@ const Signup = () => {
             )}
           </button>
         </form>
-        <p className="mt-6 sm:mt-8 text-[10px] sm:text-xs text-gray-500 text-center leading-snug sm:leading-normal">By opening an account, you agree to KoinSave's <span className='underline cursor-pointer hover:text-green-600'>Terms & Conditions</span> and <span className='underline cursor-pointer hover:text-green-600'>Privacy Policy</span>.</p>
-        <p className="mt-4 text-xs sm:text-sm text-gray-700 text-center">
+        <p className="mt-6 sm:mt-8 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 text-center leading-snug sm:leading-normal">By opening an account, you agree to KoinSave's <span className='underline cursor-pointer hover:text-green-600 dark:hover:text-green-400'>Terms & Conditions</span> and <span className='underline cursor-pointer hover:text-green-600 dark:hover:text-green-400'>Privacy Policy</span>.</p>
+        <p className="mt-4 text-xs sm:text-sm text-gray-700 dark:text-gray-200 text-center">
           Already have an account?{' '}
-          <Link to="/signin" className="text-green-600 underline font-semibold hover:text-green-800 transition">
+          <Link to="/signin" className="text-green-600 dark:text-green-300 underline font-semibold hover:text-green-800 dark:hover:text-green-200 transition">
             Sign in
           </Link>
         </p>
